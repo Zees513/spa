@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     $("#home").click(function(e){
         e.preventDefault(),
-        loadpage("index")
+        loadpage("home")
     })
 
     $("#about").click(function(e){
@@ -30,6 +30,6 @@ $(document).ready(function(){
         e.preventDefault(),
         loadpage("services")
     })
-    
-    loadpage("index")
+
+    loadpage("home")
 })
