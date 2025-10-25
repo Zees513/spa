@@ -1,35 +1,60 @@
-$(document).ready(function(){
-    
-    function loadpage(page){
+$(document).ready(function () {
+
+    function loadpage(page) {
         $.ajax({
-            url : page + '.html',
-            success : function(data){
-               $("#special").html(data)
+            url: page + '.html',
+            success: function (data) {
+                $("#special").html(data)
+                if(page === 'home'){
+                datafetching()
+                }
             }
 
         })
     }
 
 
-    $("#home").click(function(e){
+    $("#home").click(function (e) {
         e.preventDefault(),
-        loadpage("home")
+            loadpage("home")
     })
 
-    $("#about").click(function(e){
+    $("#about").click(function (e) {
         e.preventDefault(),
-        loadpage("about")
+            loadpage("about")
     })
 
-    $("#contact").click(function(e){
+    $("#contact").click(function (e) {
         e.preventDefault(),
-        loadpage("contact")
+            loadpage("contact")
     })
 
-    $("#services").click(function(e){
+    $("#services").click(function (e) {
         e.preventDefault(),
-        loadpage("services")
+            loadpage("services")
     })
 
     loadpage("home")
+
+    function datafetching() {
+        $.ajax({
+            url: "data.json",
+            type: "get",
+            success: function (user) {
+                let myhtml = ""
+                user.forEach(users => {
+                    myhtml += `<div class="card" style="width: 18rem;margin:10px;">
+  <img src="${users.p_image}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${users.p_name}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>`
+                })
+                $("#myrow").html(myhtml)
+            }
+        })
+    }
+    datafetching()
 })

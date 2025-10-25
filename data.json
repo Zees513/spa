@@ -1,0 +1,16 @@
+[
+    {
+        "p_name" : "football",
+        "p_image" : "https://media.istockphoto.com/id/182148488/photo/an-isolated-soccer-ball-on-white.jpg?s=612x612&w=0&k=20&c=xIwGNmuBVQtwC_785a58Qyxa0criru5mlWuN0W7vbwA=" 
+    },
+     {
+        "p_name" : "t-shirt",
+        "p_image" : "https://image.made-in-china.com/202f0j00cRIGBfUAbVkw/New-Design-Fashion-Tshirt-Printing-Custom-T-Shirt-Boys-T-Shirt.jpg" 
+    }, {
+        "p_name" : "headphone",
+        "p_image" : "https://hottu.pk/cdn/shop/files/bh03-1.png?v=1742815054&width=1920" 
+    }, {
+        "p_name" : "shoes",
+        "p_image" : "https://png.pngtree.com/png-vector/20250220/ourmid/pngtree-vibrant-rainbow-sports-shoe-design-png-image_15539047.png" 
+    }
+]
